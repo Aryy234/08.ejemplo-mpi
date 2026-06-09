@@ -1,0 +1,16 @@
+# Ignorar el directorio de compilación de CMake
+build/
+
+# Ignorar archivos compilados si por error se compilan fuera del build
+*.exe
+*.o
+*.obj
+*.out
+*.dll
+*.so
+
+# Ignorar carpetas ocultas de editores o sistemas operativos
+.vscode/   # (Opcional) ignora configuraciones locales de VS Code temporal, aunque a veces se comparte
+.cache/
+.DS_Store
+.vscode
