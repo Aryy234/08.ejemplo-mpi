@@ -15,3 +15,13 @@ Tarea realizar estas implementaciones:
 1. Realizar ceil
 2. Rellenar el ultimo y cambiar la matriz original
 3. Realizar truncamiento
+
+otra forma desde powershell:
+
+1. cd "build\Release"
+2. $env:PATH = "C:\oneAPI\mpi\2021.18\bin;" + $env:PATH
+3. mpiexec -n 8 matrices-mult.exe
+
+
+para hacer build del proyecto:
+cmake --build "c:\tools\CLASES 2026-2026\prog-paralela\08.ejemplo-mpi\build" --config Release

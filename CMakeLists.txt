@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2 -fopenmp")
 find_package(fmt CONFIG REQUIRED)
 
 #-- conf mpi
-set(MPI_ROOT "C:/oneAPI/mpi/latest")
+set(MPI_ROOT "C:/oneAPI/mpi/2021.18")
 set(MPI_INCLUDE "${MPI_ROOT}/include")
 set(MPI_LIB "${MPI_ROOT}/lib")
 
