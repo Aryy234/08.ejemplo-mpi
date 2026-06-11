@@ -25,3 +25,6 @@ otra forma desde powershell:
 
 para hacer build del proyecto:
 cmake --build "c:\tools\CLASES 2026-2026\prog-paralela\08.ejemplo-mpi\build" --config Release
+
+Tarea 2:
+Analizar que Comunicación Colectiva utlizar para el problema de multipliación de matrices
