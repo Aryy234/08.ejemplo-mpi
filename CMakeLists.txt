@@ -25,7 +25,11 @@ add_executable(
     matrices-mult
     matrices-mult.cpp
 )
-    
+
+add_executable(
+    mpi-matrices-mult
+    mpi-matrices-mult.cpp
+)
 
 target_link_libraries(ejemplo-mpi PRIVATE 
     fmt::fmt
@@ -33,6 +37,11 @@ target_link_libraries(ejemplo-mpi PRIVATE
 )
 
 target_link_libraries(matrices-mult PRIVATE 
+    fmt::fmt
+    ${MPI_LIB}/impi.lib
+)
+
+target_link_libraries(mpi-matrices-mult PRIVATE 
     fmt::fmt
     ${MPI_LIB}/impi.lib
 )

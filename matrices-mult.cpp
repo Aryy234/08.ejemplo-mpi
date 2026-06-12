@@ -124,9 +124,11 @@ int main(int argc, char **argv)
         for (int i = 1; i < nprocs; i++)
         {
             int filas = rows_per_rank;
-            if (ESTRATEGIA == 1 && i == nprocs - 1)
+            if (ESTRATEGIA == 1)
             {
-                filas = rows_per_rank - padding;
+                int from = std::min(i * rows_per_rank, MATRIX_DIM);
+                int to = std::min((i + 1) * rows_per_rank, MATRIX_DIM);
+                filas = to - from;
             }
             else if (ESTRATEGIA == 3 && i == nprocs - 1)
             {
@@ -164,9 +166,11 @@ int main(int argc, char **argv)
         for (int i = 1; i < nprocs; i++)
         {
             int filas = rows_per_rank;
-            if (ESTRATEGIA == 1 && i == nprocs - 1)
+            if (ESTRATEGIA == 1)
             {
-                filas = rows_per_rank - padding;
+                int from = std::min(i * rows_per_rank, MATRIX_DIM);
+                int to = std::min((i + 1) * rows_per_rank, MATRIX_DIM);
+                filas = to - from;
             }
             else if (ESTRATEGIA == 3 && i == nprocs - 1)
             {
